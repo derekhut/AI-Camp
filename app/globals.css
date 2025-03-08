@@ -15,6 +15,14 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Theme-based logo switching */
+  :root .logo-theme {
+    content: url("/logo-light.png");
+  }
+  .dark .logo-theme {
+    content: url("/logo-dark.png");
+  }
 
   :root {
     --sidebar-background: var(--background);
