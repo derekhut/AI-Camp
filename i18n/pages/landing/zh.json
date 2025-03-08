@@ -3,57 +3,13 @@
   "theme": "light",
   "header": {
     "brand": {
-      "title": "ShipAny",
+      "title": "AI Camp",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "AI Camp"
       },
       "url": "/zh"
     },
-    "nav": {
-      "items": [
-        {
-          "title": "功能特点",
-          "url": "/#feature",
-          "icon": "HiOutlineSparkles"
-        },
-        {
-          "title": "定价",
-          "url": "/#pricing",
-          "icon": "MdPayment"
-        },
-        {
-          "title": "案例展示",
-          "url": "/#showcase",
-          "icon": "BiCube",
-          "children": [
-            {
-              "title": "AI壁纸商店",
-              "description": "AI壁纸生成器",
-              "icon": "MdOutlineWallpaper",
-              "url": "https://aiwallpaper.shop",
-              "target": "_blank"
-            },
-            {
-              "title": "AI封面生成器",
-              "description": "AI封面生成器",
-              "icon": "",
-              "url": "https://aicover.design",
-              "target": "_blank"
-            }
-          ]
-        }
-      ]
-    },
-    "buttons": [
-      {
-        "title": "获取 ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
-        "variant": "link",
-        "icon": "RiArrowRightUpLine"
-      }
-    ],
     "show_sign": true,
     "show_theme": true,
     "show_locale": true
