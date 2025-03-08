@@ -33,9 +33,9 @@
         "variant": "default"
       },
       {
-        "title": "加入 Discord",
-        "icon": "RiDiscordFill",
-        "url": "https://discord.gg/HQNnrzjZQS",
+        "title": "技术文档",
+        "icon": "RiBookFill",
+        "url": "/docs",
         "target": "_blank",
         "variant": "outline"
       }

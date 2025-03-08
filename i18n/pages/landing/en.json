@@ -33,9 +33,9 @@
         "variant": "default"
       },
       {
-        "title": "Join Discord",
-        "icon": "RiDiscordFill",
-        "url": "https://discord.gg/HQNnrzjZQS",
+        "title": "Documentation",
+        "icon": "RiBookFill",
+        "url": "/docs",
         "target": "_blank",
         "variant": "outline"
       }
