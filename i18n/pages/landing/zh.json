@@ -15,9 +15,9 @@
     "show_locale": true
   },
   "hero": {
-    "title": "几小时内快速构建 AI 创业项目，而不是几天",
-    "highlight_text": "Ship Any",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。<br/>通过丰富的模板和组件快速启动。",
+    "title": "AI Camp：你的第一个校园助手",
+    "highlight_text": "AI Camp",
+    "description": "AI Camp基于校园场景集合了丰富的AI功能，供学生和老师使用。",
     "announcement": {
       "label": "2025",
       "title": "🎉 新年快乐",

@@ -15,9 +15,9 @@
     "show_locale": true
   },
   "hero": {
-    "title": "Ship Any AI Startups in hours, not days",
-    "highlight_text": "Ship Any",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups.<br/>Ship Fast with a variety of templates and components.",
+    "title": "AI Camp: Your First Campus Assistant",
+    "highlight_text": "AI Camp",
+    "description": "AI Camp integrates rich AI features based on campus scenarios for students and teachers to use.",
     "announcement": {
       "label": "2025",
       "title": "🎉 Happy New Year",
