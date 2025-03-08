@@ -23,7 +23,7 @@
       "title": "🎉 Happy New Year",
       "url": "/#pricing"
     },
-    "tip": "🎁 50% off before 2025",
+    "tip": "",
     "buttons": [
       {
         "title": "Get Started",
@@ -40,11 +40,11 @@
         "variant": "outline"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "show_badge": false
   },
   "branding": {
-    "title": "ShipAny is built on the shoulders of giants",
+    "title": "Our Partners",
     "items": [
       {
         "title": "Next.js",

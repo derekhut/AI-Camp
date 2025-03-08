@@ -23,7 +23,7 @@
       "title": "🎉 新年快乐",
       "url": "/#pricing"
     },
-    "tip": "🎁 2025年前五折优惠",
+    "tip": "",
     "buttons": [
       {
         "title": "立即开始",
@@ -40,11 +40,11 @@
         "variant": "outline"
       }
     ],
-    "show_happy_users": true,
+    "show_happy_users": false,
     "show_badge": false
   },
   "branding": {
-    "title": "ShipAny 建立在巨人的肩膀上",
+    "title": "合作伙伴",
     "items": [
       {
         "title": "Next.js",
