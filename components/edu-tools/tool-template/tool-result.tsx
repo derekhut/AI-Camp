@@ -1,9 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { ToolType, ToolResultProps } from "./types";
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+
+// 导入样式
+import "katex/dist/katex.min.css";
+import "@/components/markdown/markdown.css";
 
 /**
  * 工具结果组件
@@ -21,6 +28,19 @@ export function ToolResult({
 }: ToolResultProps) {
   // 复制状态
   const [copied, setCopied] = useState(false);
+  // 处理后的Markdown内容
+  const [processedContent, setProcessedContent] = useState(content);
+  
+  // 当内容变化时处理内容
+  useEffect(() => {
+    // 处理可能存在的```markdown前缀
+    let cleanContent = content;
+    if (cleanContent.trim().startsWith("```markdown")) {
+      cleanContent = cleanContent.replace(/^\s*```markdown\s*\n/, "");
+      cleanContent = cleanContent.replace(/\n\s*```\s*$/, "");
+    }
+    setProcessedContent(cleanContent);
+  }, [content]);
 
   /**
    * 复制内容到剪贴板
@@ -62,20 +82,59 @@ export function ToolResult({
    * 根据工具类型格式化显示内容
    */
   const formattedContent = () => {
-    // 这里可以根据不同的工具类型添加不同的格式化逻辑
+    // Markdown渲染组件
+    const MarkdownRenderer = () => (
+      <ReactMarkdown
+        remarkPlugins={[remarkMath]}
+        rehypePlugins={[rehypeKatex]}
+        className="markdown"
+        components={{
+          // 自定义标题样式
+          h1: ({node, ...props}) => <h1 className="text-2xl font-bold mt-4 mb-2" {...props} />,
+          h2: ({node, ...props}) => <h2 className="text-xl font-bold mt-3 mb-2" {...props} />,
+          h3: ({node, ...props}) => <h3 className="text-lg font-bold mt-2 mb-1" {...props} />,
+          
+          // 自定义代码块样式
+          code: ({node, className, children, ...props}) => {
+            const match = /language-(\w+)/.exec(className || '');
+            return match ? (
+              <pre className="bg-gray-100 p-3 rounded-md my-2 overflow-x-auto">
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              </pre>
+            ) : (
+              <code className="bg-gray-100 px-1 rounded" {...props}>
+                {children}
+              </code>
+            );
+          },
+          
+          // 自定义列表样式
+          ul: ({node, ...props}) => <ul className="list-disc pl-6 my-2" {...props} />,
+          ol: ({node, ...props}) => <ol className="list-decimal pl-6 my-2" {...props} />,
+          
+          // 自定义表格样式
+          table: ({node, ...props}) => <table className="border-collapse border border-gray-300 my-4 w-full" {...props} />,
+          th: ({node, ...props}) => <th className="border border-gray-300 px-4 py-2 bg-gray-100" {...props} />,
+          td: ({node, ...props}) => <td className="border border-gray-300 px-4 py-2" {...props} />,
+        }}
+      >
+        {processedContent}
+      </ReactMarkdown>
+    );
+    
     switch (toolType) {
       case ToolType.QUIZ:
-        // 多选题测验可能需要特殊格式
         return (
-          <div className="whitespace-pre-wrap">
-            {content}
+          <div className="markdown-wrapper">
+            <MarkdownRenderer />
           </div>
         );
       default:
-        // 默认格式
         return (
-          <div className="whitespace-pre-wrap">
-            {content}
+          <div className="markdown-wrapper">
+            <MarkdownRenderer />
           </div>
         );
     }
