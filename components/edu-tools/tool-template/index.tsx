@@ -38,7 +38,7 @@ const baseFormSchema = z.object({
  * 
  * @template T - 工具特定表单字段的验证模式类型
  */
-export function ToolTemplate<T extends z.ZodType>({
+export function ToolTemplate<T extends z.ZodObject<any>>({
   title,
   description,
   toolType,
@@ -54,7 +54,7 @@ export function ToolTemplate<T extends z.ZodType>({
   description: string;         // 工具描述
   toolType: ToolType;          // 工具类型
   toolIcon?: React.ReactNode;  // 工具图标
-  additionalFormSchema?: T;    // 额外的表单验证模式
+  additionalFormSchema?: T;    // 额外的表单验证模式，必须是ZodObject类型
   toolConfigComponent?: React.ReactNode; // 工具特定配置组件
   generateContent: (data: z.infer<typeof baseFormSchema> & z.infer<T>) => Promise<string>; // 内容生成函数
   gradeLevels?: string[];      // 年级级别选项
@@ -66,15 +66,18 @@ export function ToolTemplate<T extends z.ZodType>({
     ? baseFormSchema.merge(additionalFormSchema)
     : baseFormSchema;
 
+  // 定义表单类型
+  type FormType = z.infer<typeof formSchema>;
+  
   // 创建表单
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       gradeLevel: "",
       count: countOptions[0],
       description: "",
-      ...defaultValues,
-    },
+      ...(defaultValues as Partial<FormType>),
+    } as FormType,
   });
 
   // 状态管理
@@ -86,11 +89,12 @@ export function ToolTemplate<T extends z.ZodType>({
    * 处理表单提交
    * 调用内容生成函数并更新状态
    */
-  async function onSubmit(data: z.infer<typeof formSchema>) {
+  async function onSubmit(data: FormType) {
     try {
       setIsGenerating(true);
       // 调用传入的内容生成函数
-      const generatedContent = await generateContent(data);
+      // 使用类型断言确保类型兼容性
+      const generatedContent = await generateContent(data as any);
       setResult(generatedContent);
       // 切换到结果标签页
       setActiveTab("result");

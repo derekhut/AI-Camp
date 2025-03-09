@@ -40,7 +40,7 @@ export interface BaseFormFields {
  * 工具配置组件属性接口
  * 用于工具特定配置组件
  */
-export interface ToolConfigProps<T = any> {
+export interface ToolConfigProps<T extends Record<string, any> = Record<string, any>> {
   control: Control<T>;     // 表单控制器
 }
 

@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 import { ToolTemplate } from "../../tool-template";
 import { ToolType, ToolConfigProps } from "../../tool-template/types";
+import { generateQuizContentWithAPI } from "./api";
 
 /**
  * 学科ID类型定义
@@ -149,7 +150,6 @@ export function QuizTool(props: QuizToolProps = {}) {
   const generateQuizContent = async (data: QuizFormType) => {
     // 确保有默认的count值
     const countStr = data.count || "5";
-    const countNum = parseInt(countStr, 10);
     console.log("生成选择题，数据:", data);
     
     // 确定实际使用的学科
@@ -158,41 +158,31 @@ export function QuizTool(props: QuizToolProps = {}) {
     // 获取学科名称
     const subjectName = subjectNameMap[actualSubject as SubjectId];
     
-    // 这里应该调用实际的AI API生成内容
-    // 现在我们只是返回一个模拟响应
-    // 模拟API调用延迟
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // 准备生成参数
+    const params = {
+      subjectId: actualSubject as SubjectId,
+      subjectName,
+      gradeLevel: data.gradeLevel,
+      count: countStr,
+      description: data.description,
+      // 如果提供了自定义提示词模板，则包含它
+      customPromptTemplate: props.promptTemplate
+    };
     
-    // 如果提供了自定义提示词模板，则使用它来生成内容
-    // 这里暂时只是模拟，实际实现将在下一步完成
-    if (props.promptTemplate) {
-      console.log("使用自定义提示词模板:", props.promptTemplate);
-      // 后续会实现调用API的逻辑
+    try {
+      // 调用 API 生成选择题内容
+      const content = await generateQuizContentWithAPI(params);
+      return content;
+    } catch (error) {
+      console.error("生成选择题内容时出错:", error);
+      return `生成选择题内容时出错: ${error instanceof Error ? error.message : String(error)}`;
     }
-    
-    let content = `${subjectName} - ${data.gradeLevel}级别 - ${data.description}\n\n`;
-    content += `共${countStr}题\n\n`;
-    
-    // 生成选择题示例
-    for (let i = 1; i <= countNum; i++) {
-      content += `${i}. 这是第${i}个选择题的问题...\n`;
-      content += `   A. 选项A\n`;
-      content += `   B. 选项B\n`;
-      content += `   C. 选项C\n`;
-      content += `   D. 选项D\n\n`;
-    }
-    
-    content += `\n答案：\n`;
-    for (let i = 1; i <= countNum; i++) {
-      content += `${i}. ${String.fromCharCode(65 + Math.floor(Math.random() * 4))}\n`;
-    }
-    
-    return content;
   };
 
   // 确定默认值
   const defaultValues: Partial<QuizFormType> = {
     subject: props.subjectId || "ap_computer_science",
+    count: "1", // 默认生成1道题目
   };
 
   // 使用一个简单的方法处理可见性
@@ -207,6 +197,7 @@ export function QuizTool(props: QuizToolProps = {}) {
       additionalFormSchema={quizFormSchema}
       toolConfigComponent={<QuizConfig control={undefined as any} props={props} />}
       generateContent={(data: any) => generateQuizContent(data as QuizFormType)}
+      countOptions={["1", "2", "3"]} // 将题目数量选项改为 1、2、3
       defaultValues={defaultValues}
     />
   );
