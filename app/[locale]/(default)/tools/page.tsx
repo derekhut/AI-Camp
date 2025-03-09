@@ -2,6 +2,7 @@ import { getLandingPage } from "@/services/page";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import Icon from "@/components/icon";
+import Link from "next/link";
 
 export async function generateMetadata({
   params: { locale },
@@ -42,6 +43,7 @@ export default async function ToolsPage({
     { id: "marketplace", name: "市场" },
     { id: "membership", name: "会员资格" },
     { id: "mobile", name: "移动应用" },
+    { id: "education", name: "教育工具" },
   ];
   
   // 模拟工具数据（实际项目中应从数据库或API获取）
@@ -83,6 +85,16 @@ export default async function ToolsPage({
       image: "/placeholder-tool.png"
     },
     {
+      id: "quiz",
+      title: "设计选择题",
+      description: "创建一个AP学科的选择题测验，基于任何主题、标准或描述！",
+      category: "education",
+      tag: "tool",
+      isPick: true,
+      image: "/placeholder-tool.png",
+      url: "/tools/quiz"
+    },
+    {
       id: "zapier",
       title: "Zapier",
       description: "连接你的应用并自动化工作流",
@@ -112,23 +124,29 @@ export default async function ToolsPage({
         <h2 className="text-2xl font-semibold text-primary mb-6">推荐给你</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {popularTools.map((tool) => (
-            <Card key={tool.id} className="flex flex-col h-full group hover:border-primary hover:shadow-md transition-all duration-300">
-              <CardHeader className="pb-3">
-                <div className="text-primary mb-2 text-sm font-medium flex items-center">
-                  <Icon name="star" className="mr-1" />
-                  Our Pick
-                </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{tool.title}</CardTitle>
-                <CardDescription>{tool.description}</CardDescription>
-              </CardHeader>
-              <CardFooter className="mt-auto pt-3">
-                <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
-                  {tool.tag === "tutorial" && "教程"}
-                  {tool.tag === "community_story" && "社区故事"}
-                  {tool.tag === "tool" && "工具"}
-                </div>
-              </CardFooter>
-            </Card>
+            <Link 
+              key={tool.id} 
+              href={tool.url || `#${tool.id}`} 
+              className="flex flex-col h-full group transition-all duration-300"
+            >
+              <Card className="flex flex-col h-full hover:border-primary hover:shadow-md transition-all duration-300">
+                <CardHeader className="pb-3">
+                  <div className="text-primary mb-2 text-sm font-medium flex items-center">
+                    <Icon name="star" className="mr-1" />
+                    Our Pick
+                  </div>
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{tool.title}</CardTitle>
+                  <CardDescription>{tool.description}</CardDescription>
+                </CardHeader>
+                <CardFooter className="mt-auto pt-3">
+                  <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
+                    {tool.tag === "tutorial" && "教程"}
+                    {tool.tag === "community_story" && "社区故事"}
+                    {tool.tag === "tool" && "工具"}
+                  </div>
+                </CardFooter>
+              </Card>
+            </Link>
           ))}
         </div>
       </section>
@@ -150,25 +168,31 @@ export default async function ToolsPage({
           <TabsContent value="all">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {tools.map((tool) => (
-                <Card key={tool.id} className="flex flex-col h-full group hover:border-primary hover:shadow-md transition-all duration-300">
-                  <CardHeader className="pb-3">
-                    {tool.isPick && (
-                      <div className="text-primary mb-2 text-sm font-medium flex items-center">
-                        <Icon name="star" className="mr-1" />
-                        Our Pick
+                <Link 
+                  key={tool.id} 
+                  href={tool.url || `#${tool.id}`} 
+                  className="flex flex-col h-full group transition-all duration-300"
+                >
+                  <Card className="flex flex-col h-full hover:border-primary hover:shadow-md transition-all duration-300">
+                    <CardHeader className="pb-3">
+                      {tool.isPick && (
+                        <div className="text-primary mb-2 text-sm font-medium flex items-center">
+                          <Icon name="star" className="mr-1" />
+                          Our Pick
+                        </div>
+                      )}
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{tool.title}</CardTitle>
+                      <CardDescription>{tool.description}</CardDescription>
+                    </CardHeader>
+                    <CardFooter className="mt-auto pt-3">
+                      <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
+                        {tool.tag === "tutorial" && "教程"}
+                        {tool.tag === "community_story" && "社区故事"}
+                        {tool.tag === "tool" && "工具"}
                       </div>
-                    )}
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{tool.title}</CardTitle>
-                    <CardDescription>{tool.description}</CardDescription>
-                  </CardHeader>
-                  <CardFooter className="mt-auto pt-3">
-                    <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
-                      {tool.tag === "tutorial" && "教程"}
-                      {tool.tag === "community_story" && "社区故事"}
-                      {tool.tag === "tool" && "工具"}
-                    </div>
-                  </CardFooter>
-                </Card>
+                    </CardFooter>
+                  </Card>
+                </Link>
               ))}
             </div>
           </TabsContent>
@@ -180,25 +204,31 @@ export default async function ToolsPage({
                 {tools
                   .filter(tool => tool.category === category.id)
                   .map((tool) => (
-                    <Card key={tool.id} className="flex flex-col h-full group hover:border-primary hover:shadow-md transition-all duration-300">
-                      <CardHeader className="pb-3">
-                        {tool.isPick && (
-                          <div className="text-primary mb-2 text-sm font-medium flex items-center">
-                            <Icon name="star" className="mr-1" />
-                            Our Pick
+                    <Link 
+                      key={tool.id} 
+                      href={tool.url || `#${tool.id}`} 
+                      className="flex flex-col h-full group transition-all duration-300"
+                    >
+                      <Card className="flex flex-col h-full hover:border-primary hover:shadow-md transition-all duration-300">
+                        <CardHeader className="pb-3">
+                          {tool.isPick && (
+                            <div className="text-primary mb-2 text-sm font-medium flex items-center">
+                              <Icon name="star" className="mr-1" />
+                              Our Pick
+                            </div>
+                          )}
+                          <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{tool.title}</CardTitle>
+                          <CardDescription>{tool.description}</CardDescription>
+                        </CardHeader>
+                        <CardFooter className="mt-auto pt-3">
+                          <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
+                            {tool.tag === "tutorial" && "教程"}
+                            {tool.tag === "community_story" && "社区故事"}
+                            {tool.tag === "tool" && "工具"}
                           </div>
-                        )}
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{tool.title}</CardTitle>
-                        <CardDescription>{tool.description}</CardDescription>
-                      </CardHeader>
-                      <CardFooter className="mt-auto pt-3">
-                        <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
-                          {tool.tag === "tutorial" && "教程"}
-                          {tool.tag === "community_story" && "社区故事"}
-                          {tool.tag === "tool" && "工具"}
-                        </div>
-                      </CardFooter>
-                    </Card>
+                        </CardFooter>
+                      </Card>
+                    </Link>
                   ))}
               </div>
             </TabsContent>
