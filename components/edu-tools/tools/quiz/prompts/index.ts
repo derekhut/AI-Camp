@@ -8,13 +8,12 @@
 import { SubjectId } from "../index";
 import { basePromptTemplate, replaceTemplateVariables } from "./base";
 import { getApCspPrompt } from "./ap_csp";
+import { getApPsychologyPrompt } from "./ap_psychology";
+import { getApPrecalculusPrompt } from "./ap_precalculus";
+import { getApComputerSciencePrompt } from "./ap_computer_science";
 
 /**
- * 其他学科的提示词导入将在这里添加
- * 例如:
- * import { getApPsychologyPrompt } from "./ap_psychology";
- * import { getApPrecalculusPrompt } from "./ap_precalculus";
- * import { getApComputerSciencePrompt } from "./ap_computer_science";
+ * 注：未来如果添加更多学科，可以在这里导入相应的提示词
  */
 
 /**
@@ -27,14 +26,11 @@ function getSubjectSpecificPrompt(subjectId: SubjectId): string {
     case "ap_csp":
       return getApCspPrompt();
     case "ap_computer_science":
-      // 这里将来会返回 AP 计算机科学的提示词
-      return "";
+      return getApComputerSciencePrompt();
     case "ap_psychology":
-      // 这里将来会返回 AP 心理学的提示词
-      return "";
+      return getApPsychologyPrompt();
     case "ap_precalculus":
-      // 这里将来会返回 AP 微积分的提示词
-      return "";
+      return getApPrecalculusPrompt();
     default:
       return "";
   }
