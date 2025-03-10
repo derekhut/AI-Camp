@@ -52,6 +52,4 @@ export interface ToolResultProps {
   content: string;         // 生成的内容
   toolType: ToolType;      // 工具类型
   onReset: () => void;     // 重置函数
-  isStreaming?: boolean;   // 是否正在流式输出内容
-  streamUpdate?: (newContent: string) => void; // 更新流式内容的回调函数
 }

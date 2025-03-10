@@ -22,15 +22,11 @@ export function ToolResult({
   content,
   toolType,
   onReset,
-  isStreaming = false,
-  streamUpdate,
 }: ToolResultProps) {
   // 复制状态
   const [copied, setCopied] = useState(false);
   // 处理后的Markdown内容
   const [processedContent, setProcessedContent] = useState(content);
-  // 添加光标效果，只在流式输出时显示
-  const [showCursor, setShowCursor] = useState(false);
   
   // 当内容变化时处理内容
   useEffect(() => {
@@ -40,30 +36,8 @@ export function ToolResult({
       cleanContent = cleanContent.replace(/^\s*```markdown\s*\n/, "");
       cleanContent = cleanContent.replace(/\n\s*```\s*$/, "");
     }
-    
-    // 处理 DeepSeek API 返回的特殊格式
-    if (cleanContent.includes('f:{"messageId"') || cleanContent.match(/\d+:\"[^\"]+\"/)) {
-      try {
-        // 提取所有文本部分
-        const textMatches = cleanContent.match(/\d+:\"([^\"]+)\"/g) || [];
-        const extractedTexts = textMatches.map(match => {
-          // 从匹配项中提取实际文本内容
-          const contentMatch = match.match(/\d+:\"([^\"]+)\"/); 
-          return contentMatch ? contentMatch[1] : "";
-        });
-        cleanContent = extractedTexts.join("");
-      } catch (e) {
-        console.error("DeepSeek 格式处理错误:", e);
-      }
-    }
-    
     setProcessedContent(cleanContent);
-    
-    // 将 streamUpdate 回调与组件内部状态串联
-    if (streamUpdate) {
-      streamUpdate(cleanContent);
-    }
-  }, [content, streamUpdate]);
+  }, [content]);
 
   /**
    * 复制内容到剪贴板
@@ -102,76 +76,69 @@ export function ToolResult({
   };
 
   /**
-   * 渲染 Markdown 内容
-   */
-  const renderMarkdown = () => {
-    // 创建多个组件对象
-    const markdownComponents = {
-      // 自定义标题样式
-      h1: ({node, ...props}: any) => <h1 className="text-2xl font-bold mt-4 mb-2" {...props} />,
-      h2: ({node, ...props}: any) => <h2 className="text-xl font-bold mt-3 mb-2" {...props} />,
-      h3: ({node, ...props}: any) => <h3 className="text-lg font-bold mt-2 mb-1" {...props} />,
-      
-      // 自定义代码块样式
-      code: ({node, className, children, ...props}: any) => {
-        const match = /language-(\w+)/.exec(className || '');
-        return match ? (
-          <pre className="bg-gray-100 p-3 rounded-md my-2 overflow-x-auto">
-            <code className={className} {...props}>
-              {children}
-            </code>
-          </pre>
-        ) : (
-          <code className="bg-gray-100 px-1 rounded" {...props}>
-            {children}
-          </code>
-        );
-      },
-      
-      // 自定义列表样式
-      ul: ({node, ...props}: any) => <ul className="list-disc pl-6 my-2" {...props} />,
-      ol: ({node, ...props}: any) => <ol className="list-decimal pl-6 my-2" {...props} />,
-      
-      // 自定义表格样式
-      table: ({node, ...props}: any) => <table className="border-collapse border border-gray-300 my-4 w-full" {...props} />,
-      th: ({node, ...props}: any) => <th className="border border-gray-300 px-4 py-2 bg-gray-100" {...props} />,
-      td: ({node, ...props}: any) => <td className="border border-gray-300 px-4 py-2" {...props} />,
-    };
-
-    return (
-      <div>
-        <ReactMarkdown
-          className="markdown"
-          components={markdownComponents}
-        >
-          {processedContent}
-        </ReactMarkdown>
-        {/* 用户要求移除闪烁光标 */}
-      </div>
-    );
-  };
-  
-  /**
    * 根据工具类型格式化显示内容
    */
   const formattedContent = () => {
-    // 根据工具类型返回适当的渲染结果
-    return (
-      <div className="markdown-wrapper">
-        {renderMarkdown()}
-      </div>
+    // Markdown渲染组件
+    const MarkdownRenderer = () => (
+      <ReactMarkdown
+        className="markdown"
+        components={{
+          // 自定义标题样式
+          h1: ({node, ...props}) => <h1 className="text-2xl font-bold mt-4 mb-2" {...props} />,
+          h2: ({node, ...props}) => <h2 className="text-xl font-bold mt-3 mb-2" {...props} />,
+          h3: ({node, ...props}) => <h3 className="text-lg font-bold mt-2 mb-1" {...props} />,
+          
+          // 自定义代码块样式
+          code: ({node, className, children, ...props}) => {
+            const match = /language-(\w+)/.exec(className || '');
+            return match ? (
+              <pre className="bg-gray-100 p-3 rounded-md my-2 overflow-x-auto">
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              </pre>
+            ) : (
+              <code className="bg-gray-100 px-1 rounded" {...props}>
+                {children}
+              </code>
+            );
+          },
+          
+          // 自定义列表样式
+          ul: ({node, ...props}) => <ul className="list-disc pl-6 my-2" {...props} />,
+          ol: ({node, ...props}) => <ol className="list-decimal pl-6 my-2" {...props} />,
+          
+          // 自定义表格样式
+          table: ({node, ...props}) => <table className="border-collapse border border-gray-300 my-4 w-full" {...props} />,
+          th: ({node, ...props}) => <th className="border border-gray-300 px-4 py-2 bg-gray-100" {...props} />,
+          td: ({node, ...props}) => <td className="border border-gray-300 px-4 py-2" {...props} />,
+        }}
+      >
+        {processedContent}
+      </ReactMarkdown>
     );
+    
+    switch (toolType) {
+      case ToolType.QUIZ:
+        return (
+          <div className="markdown-wrapper">
+            <MarkdownRenderer />
+          </div>
+        );
+      default:
+        return (
+          <div className="markdown-wrapper">
+            <MarkdownRenderer />
+          </div>
+        );
+    }
   };
 
   return (
     <CardContent className="p-6">
       {/* 显示生成的内容 */}
-      <div className="bg-muted p-6 rounded-lg mb-6 max-h-[60vh] overflow-y-auto relative">
-        {isStreaming && (
-          <div className="absolute top-2 right-2 bg-primary text-primary-foreground text-xs px-2 py-1 rounded-full animate-pulse">
-            生成中...
-          </div>
-        )}
+      <div className="bg-muted p-6 rounded-lg mb-6 max-h-[60vh] overflow-y-auto">
         {formattedContent()}
       </div>
       
