@@ -25,7 +25,13 @@ export async function POST(req: Request) {
         textModel = openai(model);
         break;
       case "deepseek":
-        textModel = deepseek(model);
+        // 使用 createOpenAICompatible 创建 DeepSeek 客户端
+        const deepseekClient = createOpenAICompatible({
+          name: "deepseek",
+          apiKey: process.env.DEEPSEEK_API_KEY || "",
+          baseURL: process.env.DEEPSEEK_BASE_URL || "https://api.deepseek.com"
+        });
+        textModel = deepseekClient(model);
         break;
       case "openrouter":
         const openrouter = createOpenRouter({
