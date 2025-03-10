@@ -35,82 +35,102 @@ export default async function ToolsPage({
   // 工具分类（实际项目中可以从数据库或API获取）
   const categories = [
     { id: "all", name: "全部" },
-    { id: "automation", name: "自动化" },
-    { id: "websites", name: "基础网站" },
-    { id: "ecommerce", name: "电子商务" },
-    { id: "jobboard", name: "求职板" },
-    { id: "marketing", name: "营销" },
-    { id: "marketplace", name: "市场" },
-    { id: "membership", name: "会员资格" },
-    { id: "mobile", name: "移动应用" },
-    { id: "education", name: "教育工具" },
+    { id: "content_creation", name: "内容创作" },
+    { id: "personal_growth", name: "个人成长" },
+    { id: "teaching_activities", name: "教学活动" },
+    { id: "teaching_resources", name: "教学资源" },
   ];
   
   // 模拟工具数据（实际项目中应从数据库或API获取）
   const tools = [
     {
-      id: "tool1",
-      title: "如何使用Airtable和Zapier自动化处理查询",
-      description: "使用Airtable和Zapier建立查询自动化处理流程",
-      category: "automation",
-      tag: "tutorial",
-      isPick: true,
+      id: "sentence-expansion",
+      title: "句子扩写",
+      description: "将简短句子扩写为更丰富、更有表现力的段落",
+      category: "content_creation",
+      isPick: false,
       image: "/placeholder-tool.png"
     },
     {
-      id: "tool2",
-      title: "Superpath: 每月只花$500打造价值$500K的内容营销业务",
-      description: "通过内容营销策略打造持续增长的业务",
-      category: "marketing",
-      tag: "community_story",
-      isPick: true,
+      id: "professional-email",
+      title: "撰写专业邮件",
+      description: "根据需求生成专业、得体的商务和学术邮件",
+      category: "content_creation",
+      isPick: false,
       image: "/placeholder-tool.png"
     },
     {
-      id: "tool3",
-      title: "使用Outseta和Carrd构建高效的咨询业务",
-      description: "使用无代码工具快速启动咨询业务",
-      category: "websites",
-      tag: "tutorial",
-      isPick: true,
+      id: "daily-quotes",
+      title: "每日金句",
+      description: "生成激励、反思或创造性思考的精彩句子",
+      category: "content_creation",
+      isPick: false,
       image: "/placeholder-tool.png"
     },
     {
-      id: "tool4",
-      title: "构建无代码求职板",
-      description: "不需要编程即可构建专业求职板网站",
-      category: "jobboard",
-      tag: "tutorial",
-      isPick: true,
+      id: "concept-background",
+      title: "概念背景",
+      description: "深入浅出地解释复杂的主题和概念",
+      category: "content_creation",
+      isPick: false,
+      image: "/placeholder-tool.png"
+    },
+    {
+      id: "concept-analogy",
+      title: "概念类比",
+      description: "通过生动的类比解释抽象或复杂的概念",
+      category: "content_creation",
+      isPick: false,
+      image: "/placeholder-tool.png"
+    },
+    {
+      id: "effective-communication",
+      title: "有效沟通",
+      description: "针对不同场景提供有效沟通的策略和建议",
+      category: "personal_growth",
+      isPick: false,
+      image: "/placeholder-tool.png"
+    },
+    {
+      id: "mind-mirror",
+      title: "心灵镜像",
+      description: "通过提示词反映学生的心理和情感状态",
+      category: "personal_growth",
+      isPick: false,
+      image: "/placeholder-tool.png"
+    },
+    {
+      id: "teaching-slides",
+      title: "教学课件",
+      description: "为特定知识点生成结构清晰的教学课件",
+      category: "teaching_resources",
+      isPick: false,
+      image: "/placeholder-tool.png"
+    },
+    {
+      id: "group-activity",
+      title: "小组活动",
+      description: "设计适用于特定知识点的互动小组活动",
+      category: "teaching_activities",
+      isPick: false,
+      image: "/placeholder-tool.png"
+    },
+    {
+      id: "activity-plan",
+      title: "活动方案",
+      description: "生成详细的活动计划，包括目标、规则和时间安排",
+      category: "teaching_activities",
+      isPick: false,
       image: "/placeholder-tool.png"
     },
     {
       id: "quiz",
       title: "设计选择题",
       description: "创建一个AP学科的选择题测验，基于任何主题、标准或描述！",
-      category: "education",
-      tag: "tool",
+      category: "teaching_resources",
       isPick: true,
       image: "/placeholder-tool.png",
       url: "/tools/quiz"
-    },
-    {
-      id: "zapier",
-      title: "Zapier",
-      description: "连接你的应用并自动化工作流",
-      category: "automation",
-      tag: "tool",
-      isPick: true,
-      image: "/placeholder-tool.png"
-    },
-    {
-      id: "webflow",
-      title: "Webflow",
-      description: "构建更好的业务网站，更快。无需编码。",
-      category: "websites",
-      tag: "tool",
-      isPick: true,
-      image: "/placeholder-tool.png"
     },
   ];
   
@@ -140,9 +160,10 @@ export default async function ToolsPage({
                 </CardHeader>
                 <CardFooter className="mt-auto pt-3">
                   <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
-                    {tool.tag === "tutorial" && "教程"}
-                    {tool.tag === "community_story" && "社区故事"}
-                    {tool.tag === "tool" && "工具"}
+                    {tool.category === "content_creation" && "内容创作"}
+                    {tool.category === "personal_growth" && "个人成长"}
+                    {tool.category === "teaching_activities" && "教学活动"}
+                    {tool.category === "teaching_resources" && "教学资源"}
                   </div>
                 </CardFooter>
               </Card>
@@ -186,9 +207,10 @@ export default async function ToolsPage({
                     </CardHeader>
                     <CardFooter className="mt-auto pt-3">
                       <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
-                        {tool.tag === "tutorial" && "教程"}
-                        {tool.tag === "community_story" && "社区故事"}
-                        {tool.tag === "tool" && "工具"}
+                        {tool.category === "content_creation" && "内容创作"}
+                        {tool.category === "personal_growth" && "个人成长"}
+                        {tool.category === "teaching_activities" && "教学活动"}
+                        {tool.category === "teaching_resources" && "教学资源"}
                       </div>
                     </CardFooter>
                   </Card>
@@ -222,9 +244,9 @@ export default async function ToolsPage({
                         </CardHeader>
                         <CardFooter className="mt-auto pt-3">
                           <div className="inline-block px-2.5 py-1 bg-accent/10 text-accent-foreground rounded-md text-xs font-medium">
-                            {tool.tag === "tutorial" && "教程"}
-                            {tool.tag === "community_story" && "社区故事"}
-                            {tool.tag === "tool" && "工具"}
+                            {tool.category === "content_creation" && "内容创作"}
+                            {tool.category === "teaching_activities" && "教学活动"}
+                            {tool.category === "teaching_resources" && "教学资源"}
                           </div>
                         </CardFooter>
                       </Card>
