@@ -50,6 +50,7 @@
     "@supabase/supabase-js": "^2.47.10",
     "@types/canvas-confetti": "^1.9.0",
     "@types/mdx": "^2.0.13",
+    "@uiw/react-md-editor": "^4.0.5",
     "ai": "^4.1.42",
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
