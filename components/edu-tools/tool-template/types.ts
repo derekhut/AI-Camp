@@ -8,10 +8,13 @@ import { Control } from "react-hook-form";
  * 用于标识不同类型的教育工具
  */
 export enum ToolType {
-  QUIZ = "quiz",           // 多选题测验
-  ESSAY = "essay",         // 扩写题
-  REWRITE = "rewrite",     // 改写题
-  FILL_BLANK = "fill_blank", // 填空题
+  QUIZ = "quiz",             // 多选题测验
+  ESSAY = "essay",           // 扩写题
+  REWRITE = "rewrite",       // 改写题
+  FILL_BLANK = "fill_blank",   // 填空题
+  EMAIL = "email",           // 专业邮件
+  DAILY_QUOTE = "daily_quote", // 每日金句
+  TEXT_GENERATION = "text_generation", // 通用文本生成
   // 可以根据需要添加更多工具类型
 }
 
