@@ -5,7 +5,7 @@
  * 并提供统一的接口供 QuizTool 组件使用
  */
 
-import { SubjectId } from "../index";
+import { SubjectId } from "./types";
 import { basePromptTemplate, replaceTemplateVariables } from "./base";
 import { getApCspPrompt } from "./ap_csp";
 import { getApPsychologyPrompt } from "./ap_psychology";
