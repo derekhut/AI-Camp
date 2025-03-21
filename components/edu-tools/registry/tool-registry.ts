@@ -31,6 +31,7 @@ import { quizTool } from './definitions/quiz';
 import { professionalEmailTool } from './definitions/professional-email';
 import { lessonPlanTool } from './definitions/lesson-plan';
 import { conceptBackgroundTool } from './definitions/concept-background';
+import { teachingMaterialTool } from './definitions/teaching-material';
 
 // 预先创建工具映射表，避免动态导入
 const toolBackupMap: Record<string, ToolDefinition> = {
@@ -38,6 +39,7 @@ const toolBackupMap: Record<string, ToolDefinition> = {
   'professional-email': professionalEmailTool,
   'lesson-plan': lessonPlanTool,
   'concept-background': conceptBackgroundTool,
+  'teaching-material': teachingMaterialTool,
   // 可以根据需要添加更多工具
 };
 

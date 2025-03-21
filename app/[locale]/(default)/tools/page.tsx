@@ -83,22 +83,7 @@ export default async function ToolsPage({
       isPick: false,
       image: "/placeholder-tool.png"
     },
-    {
-      id: "concept-background",
-      title: "概念背景",
-      description: "深入浅出地解释复杂的主题和概念",
-      category: ToolCategory.CONTENT_CREATION,
-      isPick: false,
-      image: "/placeholder-tool.png"
-    },
-    {
-      id: "teaching-slides",
-      title: "教学课件",
-      description: "为特定知识点生成结构清晰的教学课件",
-      category: ToolCategory.PLANNING,
-      isPick: false,
-      image: "/placeholder-tool.png"
-    },
+    // 注意：concept-background 和 teaching-material 工具已经实现，已从计划中工具列表移除
   ];
   
   // 合并已实现和计划中的工具
