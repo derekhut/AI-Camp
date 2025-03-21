@@ -10,6 +10,7 @@ import { conceptBackgroundTool } from './definitions/concept-background';
 import { teachingMaterialTool } from './definitions/teaching-material';
 import { sentenceExpansionTool } from './definitions/sentence-expansion';
 import { dailyQuoteTool } from './definitions/daily-quote';
+import { mindMirrorTool } from './definitions/mind-mirror';
 
 // 注册所有工具
 // 每添加一个新工具，只需要在这里导入并注册即可
@@ -34,6 +35,9 @@ registerTool(sentenceExpansionTool);
 
 console.log('注册每日金句工具:', dailyQuoteTool.id);
 registerTool(dailyQuoteTool);
+
+console.log('注册心灵镜像工具:', mindMirrorTool.id);
+registerTool(mindMirrorTool);
 
 // 导出工具注册表相关函数
 export { getAllTools, getToolById } from './tool-registry';

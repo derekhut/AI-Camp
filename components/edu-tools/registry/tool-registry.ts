@@ -34,6 +34,7 @@ import { conceptBackgroundTool } from './definitions/concept-background';
 import { teachingMaterialTool } from './definitions/teaching-material';
 import { sentenceExpansionTool } from './definitions/sentence-expansion';
 import { dailyQuoteTool } from './definitions/daily-quote';
+import { mindMirrorTool } from './definitions/mind-mirror';
 
 // 预先创建工具映射表，避免动态导入
 const toolBackupMap: Record<string, ToolDefinition> = {
@@ -44,6 +45,7 @@ const toolBackupMap: Record<string, ToolDefinition> = {
   'teaching-material': teachingMaterialTool,
   'sentence-expansion': sentenceExpansionTool,
   'daily-quote': dailyQuoteTool,
+  'mind-mirror': mindMirrorTool,
   // 可以根据需要添加更多工具
 };
 
