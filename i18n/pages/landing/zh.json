@@ -5,7 +5,7 @@
     "brand": {
       "title": "AI Camp",
       "logo": {
-        "src": "/logo.png",
+        "src": "/logo-light.png",
         "alt": "AI Camp"
       },
       "url": "/zh"
@@ -551,7 +551,7 @@
       "title": "AI Camp",
       "description": "AI Camp 是一个为教师和学生打造的智能教育平台，提供丰富的AI教育工具和资源。",
       "logo": {
-        "src": "/logo.png",
+        "src": "/logo-light.png",
         "alt": "AI Camp"
       },
       "url": "/"
@@ -584,7 +584,7 @@
             },
             {
               "title": "Windsurf",
-              "url": "https://windsurf.io/",
+              "url": "https://codeium.com/windsurf",
               "target": "_blank"
             }
           ]
