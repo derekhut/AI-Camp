@@ -80,21 +80,14 @@ export const toolConfigs: Record<string, ToolConfig> = {
     toolType: ToolType.EMAIL,
     icon: "Mail",
     visibleFields: {
-      gradeLevel: true,
-      description: true,
-      recipient: true,
-      purpose: true,
+      emailRequest: true,
     },
-    gradeLevels: DEFAULT_GRADE_LEVELS,
-    defaultValues: {
-      gradeLevel: "大学",
-    },
+    defaultValues: {},
     additionalFormSchema: z.object({
-      recipient: z.string({
-        required_error: "请选择收件人类型",
-      }),
-      purpose: z.string({
-        required_error: "请选择邮件目的",
+      emailRequest: z.string({
+        required_error: "请输入邮件需求",
+      }).min(10, {
+        message: "邮件需求至少需要10个字符",
       }),
     }),
   },

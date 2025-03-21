@@ -126,7 +126,7 @@ export function ToolTemplate<T extends z.ZodObject<any>>({
           <CardDescription>{description}</CardDescription>
         </CardHeader>
         
-        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as "form" | "result")}>
+        <Tabs value={activeTab} onValueChange={(value: string) => setActiveTab(value as "form" | "result")}>
           <TabsList className="grid w-full grid-cols-2 mb-4 px-6">
             <TabsTrigger value="form">输入</TabsTrigger>
             <TabsTrigger value="result" disabled={!result}>结果</TabsTrigger>

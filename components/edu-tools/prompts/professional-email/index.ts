@@ -13,17 +13,11 @@ import { basePromptTemplate, replaceTemplateVariables } from "./base";
  * @returns 完整的提示词
  */
 export function generatePrompt(params: {
-  recipient: string;     // 收件人类型
-  purpose: string;       // 邮件目的
-  gradeLevel: string;    // 适用场景
-  description: string;   // 主要内容
+  emailRequest: string;  // 邮件需求
 }): string {
   // 使用基本模板替换变量
   const variables = {
-    recipient: params.recipient,
-    purpose: params.purpose,
-    gradeLevel: params.gradeLevel,
-    description: params.description,
+    emailRequest: params.emailRequest
   };
   
   return replaceTemplateVariables(basePromptTemplate, variables);

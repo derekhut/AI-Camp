@@ -8,10 +8,7 @@ import { generatePrompt } from "../../prompts/professional-email";
  * 专业邮件生成参数接口
  */
 export interface GenerateEmailParams {
-  recipient: string;     // 收件人类型
-  purpose: string;       // 邮件目的
-  gradeLevel: string;    // 适用场景
-  description: string;   // 主要内容
+  emailRequest: string;  // 邮件需求
 }
 
 /**
