@@ -10,6 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RocketIcon } from '@radix-ui/react-icons';
 import ReactMarkdown from 'react-markdown';
+import { useTool } from '../registry/hooks';
 // 工具结果组件
 const ToolResult: React.FC<{ result: any; title?: string }> = ({ result, title = '生成结果' }) => {
   // 确保 result 是字符串
@@ -50,7 +51,6 @@ const ToolResult: React.FC<{ result: any; title?: string }> = ({ result, title =
     </Card>
   );
 };
-import { useTool } from '../registry/hooks';
 
 interface ToolPageProps {
   toolId: string;

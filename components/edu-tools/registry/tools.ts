@@ -6,6 +6,7 @@ import { registerTool, getAllTools, getToolById } from './tool-registry';
 import { professionalEmailTool } from './definitions/professional-email';
 import { quizTool } from './definitions/quiz';
 import { lessonPlanTool } from './definitions/lesson-plan';
+import { conceptBackgroundTool } from './definitions/concept-background';
 
 // 注册所有工具
 // 每添加一个新工具，只需要在这里导入并注册即可
@@ -18,6 +19,9 @@ registerTool(quizTool);
 
 console.log('注册教案工具:', lessonPlanTool.id);
 registerTool(lessonPlanTool);
+
+console.log('注册概念背景工具:', conceptBackgroundTool.id);
+registerTool(conceptBackgroundTool);
 
 // 导出工具注册表相关函数
 export { getAllTools, getToolById } from './tool-registry';
