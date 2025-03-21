@@ -85,56 +85,56 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "What is ShipAny",
-    "label": "Introduce",
-    "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Built in a variety of templates and components.",
+    "title": "What is AI Camp",
+    "label": "Introduction",
+    "description": "AI Camp is an educational AI tools platform that provides teachers and students with rich AI teaching and learning resources.",
     "image": {
       "src": "/imgs/features/1.png"
     },
     "items": [
       {
-        "title": "Ready-to-use Templates",
-        "description": "Choose from dozens of production-ready AI SaaS templates to quickly start your project.",
-        "icon": "RiNextjsFill"
+        "title": "Teaching Assistant Tools",
+        "description": "Offers various AI teaching tools to help teachers improve lesson preparation efficiency, classroom teaching quality, and student assessment.",
+        "icon": "RiUser3Fill"
       },
       {
-        "title": "Infrastructure Setup",
-        "description": "Get instant access to scalable infrastructure with best practices built-in.",
-        "icon": "RiDatabase2Line"
+        "title": "Learning Support Tools",
+        "description": "Provides intelligent learning guidance for students, including knowledge explanations, practice exercises, and creativity inspiration.",
+        "icon": "RiBookOpenFill"
       },
       {
-        "title": "Quick Deployment",
-        "description": "Deploy your AI SaaS application to production in hours, not days.",
-        "icon": "RiCloudyFill"
+        "title": "Personalized Experience",
+        "description": "Delivers personalized teaching and learning experiences based on AI technology, meeting the needs of different users.",
+        "icon": "RiMagicFill"
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "Why Choose ShipAny",
+    "title": "Why Choose AI Camp",
     "label": "Benefits",
-    "description": "Get everything you need to launch your AI startup - from ready-to-use templates to technical support.",
+    "description": "Providing teachers and students with comprehensive intelligent learning experiences to enhance teaching and learning efficiency.",
     "items": [
       {
-        "title": "Complete Framework",
-        "description": "Built on Next.js with authentication, payments, and AI integration - everything works out of the box.",
-        "icon": "RiNextjsFill",
+        "title": "Intelligent Teaching Tools",
+        "description": "Leveraging advanced AI technology to provide teachers with tools for quickly generating teaching resources, quizzes, and lesson plans.",
+        "icon": "RiRobot2Fill",
         "image": {
           "src": "/imgs/features/2.png"
         }
       },
       {
-        "title": "Rich Templates Library",
-        "description": "Choose from various AI SaaS templates to kickstart your project - chatbots, image generation, and more.",
-        "icon": "RiClapperboardAiLine",
+        "title": "Rich Learning Resources",
+        "description": "Includes diverse learning tools, from knowledge analysis and concept explanations to interactive quizzes, meeting various learning needs.",
+        "icon": "RiBookOpenFill",
         "image": {
           "src": "/imgs/features/3.png"
         }
       },
       {
-        "title": "Technical Guidance",
-        "description": "Get dedicated support and join our developer community to ensure your successful launch.",
-        "icon": "RiCodeFill",
+        "title": "Personalized Learning Paths",
+        "description": "Automatically adjusts learning content and difficulty based on students' learning styles, interests, and progress, providing tailored learning experiences.",
+        "icon": "RiRouteLineFill",
         "image": {
           "src": "/imgs/features/4.png"
         }
@@ -143,8 +143,8 @@
   },
   "usage": {
     "name": "usage",
-    "title": "How to Launch with ShipAny",
-    "description": "Get your AI SaaS startup running in three simple steps:",
+    "title": "How to Get Started with AI Camp",
+    "description": "Begin your intelligent teaching journey in just four simple steps:",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -152,29 +152,29 @@
     "text_align": "center",
     "items": [
       {
-        "title": "Get ShipAny",
-        "description": "Buy ShipAny with a one-time payment. Check your email for the code and documentation.",
+        "title": "Create an Account",
+        "description": "Choose your role as a teacher or student, create your personal account, and start your AI education journey.",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "Start Your Project",
-        "description": "Read the documentation and clone the code of ShipAny. Start building your AI SaaS startup.",
+        "title": "Explore Tool Library",
+        "description": "Browse the wide range of AI education tools and select the ones that best fit your teaching or learning needs.",
         "image": {
           "src": "/imgs/features/6.png"
         }
       },
       {
-        "title": "Customize Your Project",
-        "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+        "title": "Generate Custom Content",
+        "description": "Input your specific requirements, such as subject, grade level, or teaching theme to get personalized AI-generated content.",
         "image": {
           "src": "/imgs/features/7.png"
         }
       },
       {
-        "title": "Deploy to Production",
-        "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+        "title": "Apply and Share",
+        "description": "Save, export, or directly share the generated content and apply it to your teaching or learning process.",
         "image": {
           "src": "/imgs/features/8.png"
         }
@@ -183,38 +183,38 @@
   },
   "feature": {
     "name": "feature",
-    "title": "Key Features of ShipAny",
-    "description": "Everything you need to launch your AI SaaS startup quickly and efficiently.",
+    "title": "Key Features of AI Camp",
+    "description": "A comprehensive intelligent education platform for teachers and students.",
     "items": [
       {
-        "title": "Next.js Boilerplate",
-        "description": "Production-ready Next.js templates with SEO-friendly structure and i18n support.",
-        "icon": "RiNextjsFill"
+        "title": "Smart Lesson Planning",
+        "description": "AI-powered generation of high-quality lesson plans and learning schedules that meet educational standards.",
+        "icon": "RiFileList3Line"
       },
       {
-        "title": "Authentication & Payments",
-        "description": "Integrated Google OAuth, one-tap login, and Stripe payment processing.",
-        "icon": "RiKey2Fill"
+        "title": "Intelligent Quiz Creation",
+        "description": "One-click generation of diverse quiz formats with support for different difficulty levels and knowledge points.",
+        "icon": "RiQuestionLine"
       },
       {
-        "title": "Data Infrastructure",
-        "description": "Built-in Supabase integration for reliable and scalable data storage.",
-        "icon": "RiDatabase2Line"
+        "title": "Concept Explanations",
+        "description": "Clear, accessible explanations of complex concepts to help students understand difficult topics more quickly.",
+        "icon": "RiLightbulbFill"
       },
       {
-        "title": "One-Click Deployment",
-        "description": "Seamless deployment to Vercel or Cloudflare with automated setup.",
-        "icon": "RiCloudy2Fill"
-      },
-      {
-        "title": "Business Analytics",
-        "description": "Integrated Google Analytics and Search Console for tracking growth.",
+        "title": "Data-Driven Feedback",
+        "description": "Analysis of student responses with personalized feedback and improvement suggestions to support learning growth.",
         "icon": "RiBarChart2Line"
       },
       {
-        "title": "AI-Ready Infrastructure",
-        "description": "Pre-configured AI integration with built-in credits system and API sales.",
-        "icon": "RiRobot2Line"
+        "title": "Teaching Resource Library",
+        "description": "Rich collection of teaching materials including presentations, charts, case studies, and interactive activities.",
+        "icon": "RiBookOpenFill"
+      },
+      {
+        "title": "Multimodal Content Creation",
+        "description": "Support for generating and editing educational content in multiple formats including text, images, and tables.",
+        "icon": "RiLayoutGridFill"
       }
     ]
   },
@@ -497,32 +497,32 @@
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Frequently Asked Questions About ShipAny",
-    "description": "Have another question? Contact us on Discord or by email.",
+    "title": "Frequently Asked Questions About AI Camp",
+    "description": "Have another question? Contact us through our official channels or by email.",
     "items": [
       {
-        "title": "What exactly is ShipAny and how does it work?",
-        "description": "ShipAny is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+        "title": "What is AI Camp and how does it help education?",
+        "description": "AI Camp is an intelligent education platform designed for teachers and students. It uses advanced AI technology to create lesson plans, quizzes, and learning resources, helping teachers improve teaching efficiency and providing students with personalized learning experiences."
       },
       {
-        "title": "Do I need advanced technical skills to use ShipAny?",
-        "description": "While basic programming knowledge is helpful, ShipAny is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+        "title": "Do I need special technical skills to use AI Camp?",
+        "description": "Not at all. AI Camp is designed to be intuitive and user-friendly. Whether you're an educational technology expert or a teacher just getting started with digital tools, you can easily get up and running. We provide detailed guides and quick-start tutorials."
       },
       {
-        "title": "What types of AI SaaS can I build with ShipAny?",
-        "description": "ShipAny supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+        "title": "What subjects and grade levels does AI Camp support?",
+        "description": "AI Camp supports a wide range of subjects including mathematics, science, languages, history, geography, and more. The platform is suitable for students of all grades, from elementary school to higher education, with appropriate content and tools for each age group."
       },
       {
-        "title": "How long does it typically take to launch with ShipAny?",
-        "description": "With ShipAny, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+        "title": "Can I customize the generated content?",
+        "description": "Absolutely! AI Camp offers a high degree of customization. You can specify the subject, difficulty level, knowledge points, teaching objectives, and learning styles to generate content that best suits your needs and those of your students."
       },
       {
-        "title": "What's included in the ShipAny infrastructure?",
-        "description": "ShipAny provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+        "title": "How accurate is the content generated by AI Camp?",
+        "description": "AI Camp uses advanced training models and carefully curated educational resources to ensure that the generated content is accurate, relevant, and meets educational standards. However, we also encourage educators to review the content before use and provide feedback to continuously improve system quality."
       },
       {
-        "title": "Can I customize the templates to match my brand?",
-        "description": "Absolutely! All ShipAny templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+        "title": "How can I integrate AI Camp with my existing teaching methods?",
+        "description": "AI Camp is designed to complement rather than replace traditional teaching. Teachers can use our tools to prepare course materials, customize assignments, create assessments, and provide personalized feedback, while maintaining the value of face-to-face instruction and the importance of personal guidance."
       }
     ]
   },

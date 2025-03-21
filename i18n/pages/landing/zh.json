@@ -85,56 +85,56 @@
   },
   "introduce": {
     "name": "introduce",
-    "title": "什么是 ShipAny",
+    "title": "什么是 AI Camp",
     "label": "介绍",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，内置多种模板和组件。",
+    "description": "AI Camp 是一个面向教育领域的AI工具平台，为教师和学生提供丰富的AI教学辅助工具。",
     "image": {
       "src": "/imgs/features/1.png"
     },
     "items": [
       {
-        "title": "即用型模板",
-        "description": "从数十个生产就绪的 AI SaaS 模板中选择，快速启动您的项目。",
-        "icon": "RiNextjsFill"
+        "title": "教学助手工具",
+        "description": "提供多种AI教学辅助工具，帮助教师提高备课效率、课堂教学质量和学生评估。",
+        "icon": "RiUser3Fill"
       },
       {
-        "title": "基础设施配置",
-        "description": "立即获取内置最佳实践的可扩展基础设施。",
-        "icon": "RiDatabase2Line"
+        "title": "学习辅导工具",
+        "description": "为学生提供智能化学习辅导，包括知识讲解、习题练习和创意激发。",
+        "icon": "RiBookOpenFill"
       },
       {
-        "title": "快速部署",
-        "description": "在几小时内将您的 AI SaaS 应用部署到生产环境，而不是几天。",
-        "icon": "RiCloudyFill"
+        "title": "个性化体验",
+        "description": "基于AI技术提供个性化教学和学习体验，满足不同用户的需求。",
+        "icon": "RiMagicFill"
       }
     ]
   },
   "benefit": {
     "name": "benefit",
-    "title": "为什么选择 ShipAny",
+    "title": "为什么选择 AI Camp",
     "label": "优势",
-    "description": "获取启动 AI 创业所需的一切 - 从即用型模板到技术支持。",
+    "description": "为教师和学生提供全方位的智能学习体验，提升教学与学习效率。",
     "items": [
       {
-        "title": "完整框架",
-        "description": "基于 Next.js 构建，集成身份验证、支付和 AI 功能 - 一切开箱即用。",
-        "icon": "RiNextjsFill",
+        "title": "智能教学应用",
+        "description": "利用先进的AI技术，为教师提供快速生成教学资源、测验题和教案的工具。",
+        "icon": "RiRobot2Fill",
         "image": {
           "src": "/imgs/features/2.png"
         }
       },
       {
-        "title": "丰富的模板库",
-        "description": "选择各种 AI SaaS 模板来启动您的项目 - 聊天机器人、图像生成等。",
-        "icon": "RiClapperboardAiLine",
+        "title": "丰富的学习资源",
+        "description": "包含多样化学习工具，从知识解析、概念讲解到互动式测验，满足各种学习需求。",
+        "icon": "RiBookOpenFill",
         "image": {
           "src": "/imgs/features/3.png"
         }
       },
       {
-        "title": "技术指导",
-        "description": "获得专门支持并加入我们的开发者社区，确保您成功启动。",
-        "icon": "RiCodeFill",
+        "title": "个性化学习路径",
+        "description": "根据学生的学习风格、兴趣和进度自动调整学习内容和难度，提供量身定制的学习体验。",
+        "icon": "RiRouteLineFill",
         "image": {
           "src": "/imgs/features/4.png"
         }
@@ -143,8 +143,8 @@
   },
   "usage": {
     "name": "usage",
-    "title": "如何使用 ShipAny 启动项目",
-    "description": "通过三个简单步骤启动您的 AI SaaS 创业项目：",
+    "title": "如何开始使用 AI Camp",
+    "description": "只需四个简单步骤，即可开启您的智能教学之旅：",
     "image": {
       "src": "/imgs/features/1.png"
     },
@@ -152,29 +152,29 @@
     "text_align": "center",
     "items": [
       {
-        "title": "获取 ShipAny",
-        "description": "一次性付款购买 ShipAny。查收邮件获取代码和文档。",
+        "title": "注册账号",
+        "description": "选择教师或学生角色，创建您的个人账号，开启您的AI教育之旅。",
         "image": {
           "src": "/imgs/features/5.png"
         }
       },
       {
-        "title": "开始您的项目",
-        "description": "阅读文档并克隆 ShipAny 代码。开始构建您的 AI SaaS 创业项目。",
+        "title": "探索工具库",
+        "description": "浏览丰富的AI教育工具，按照教学或学习需求选择适合的工具。",
         "image": {
           "src": "/imgs/features/6.png"
         }
       },
       {
-        "title": "定制您的项目",
-        "description": "使用您的数据和内容修改模板。满足特定的 AI 功能需求。",
+        "title": "生成定制内容",
+        "description": "输入您的特定需求，如学科、年级或教学主题，获取个性化的AI生成内容。",
         "image": {
           "src": "/imgs/features/7.png"
         }
       },
       {
-        "title": "部署到生产环境",
-        "description": "通过几个步骤将项目部署到生产环境，立即开始服务客户。",
+        "title": "应用与分享",
+        "description": "保存、导出或直接分享生成的内容，并将其应用到您的教学或学习过程中。",
         "image": {
           "src": "/imgs/features/8.png"
         }
@@ -183,38 +183,38 @@
   },
   "feature": {
     "name": "feature",
-    "title": "ShipAny 核心功能",
-    "description": "快速高效启动 AI SaaS 创业所需的一切。",
+    "title": "AI Camp 核心功能",
+    "description": "为教师和学生打造全方位的智能教育平台。",
     "items": [
       {
-        "title": "Next.js 模板",
-        "description": "生产就绪的 Next.js 模板，支持 SEO 友好结构和国际化。",
-        "icon": "RiNextjsFill"
+        "title": "智能教案生成",
+        "description": "基于AI技术，自动生成符合教学标准的高质量教案和学习计划。",
+        "icon": "RiFileList3Line"
       },
       {
-        "title": "身份验证和支付",
-        "description": "集成 Google OAuth、一键登录和 Stripe 支付处理。",
-        "icon": "RiKey2Fill"
+        "title": "智能测验生成",
+        "description": "一键生成多形式测验题，支持不同难度级别和知识点覆盖。",
+        "icon": "RiQuestionLine"
       },
       {
-        "title": "数据基础设施",
-        "description": "内置 Supabase 集成，提供可靠和可扩展的数据存储。",
-        "icon": "RiDatabase2Line"
+        "title": "概念知识讲解",
+        "description": "为复杂概念提供深入浅出的解释，帮助学生更快理解难点。",
+        "icon": "RiLightbulbFill"
       },
       {
-        "title": "一键部署",
-        "description": "无缝部署到 Vercel 或 Cloudflare，自动化设置。",
-        "icon": "RiCloudy2Fill"
-      },
-      {
-        "title": "业务分析",
-        "description": "集成 Google Analytics 和 Search Console 追踪增长。",
+        "title": "数据验证反馈",
+        "description": "分析学生答案，提供个性化反馈和改进建议，助力学习成长。",
         "icon": "RiBarChart2Line"
       },
       {
-        "title": "AI 就绪基础设施",
-        "description": "预配置 AI 集成，内置积分系统和 API 销售。",
-        "icon": "RiRobot2Line"
+        "title": "教学资源库",
+        "description": "丰富的教学素材库，包括课件、图表、案例和互动活动等。",
+        "icon": "RiBookOpenFill"
+      },
+      {
+        "title": "多模态创作",
+        "description": "支持文本、图像、表格等多种形式的教学内容生成和编辑。",
+        "icon": "RiLayoutGridFill"
       }
     ]
   },
@@ -497,32 +497,32 @@
   "faq": {
     "name": "faq",
     "label": "常见问题",
-    "title": "关于 ShipAny 的常见问题",
-    "description": "还有其他问题？通过 Discord 或电子邮件联系我们。",
+    "title": "关于 AI Camp 的常见问题",
+    "description": "还有其他问题？通过我们的官方渠道或电子邮件联系我们。",
     "items": [
       {
-        "title": "ShipAny 究竟是什么，它是如何工作的？",
-        "description": "ShipAny 是一个专门为构建 AI SaaS 创业项目设计的综合性 NextJS 模板。它提供即用型模板、基础设施设置和部署工具，帮助您在几小时内而不是几天内启动 AI 业务。"
+        "title": "AI Camp 是什么，它如何帮助教育？",
+        "description": "AI Camp 是一个为教师和学生打造的智能教育平台。它利用先进的AI技术创建教案、测验和学习资源，帮助教师提高教学效率，并为学生提供个性化学习体验。"
       },
       {
-        "title": "使用 ShipAny 需要高级技术技能吗？",
-        "description": "虽然基本的编程知识会有帮助，但 ShipAny 设计得非常开发者友好。我们的模板和文档使您即使不是 AI 或云基础设施专家也能轻松入门。"
+        "title": "使用 AI Camp 需要具备特殊的技术能力吗？",
+        "description": "不需要。AI Camp 设计得非常直观和用户友好。无论您是教育技术专家还是刚接触数字工具的教师，都能轻松上手。我们提供详细的指南和快速入门教程。"
       },
       {
-        "title": "我可以用 ShipAny 构建什么类型的 AI SaaS？",
-        "description": "ShipAny 支持广泛的 AI 应用，从内容生成到数据分析工具。我们的模板涵盖流行用例，如 AI 聊天机器人、内容生成器、图像处理应用等。"
+        "title": "AI Camp 支持哪些学科和年级水平？",
+        "description": "AI Camp 支持广泛的学科，包括数学、科学、语言、历史、地理等。平台适用于各个年级的学生，从小学到高等教育，每个年龄段都有适合的内容和工具。"
       },
       {
-        "title": "使用 ShipAny 通常需要多长时间才能启动？",
-        "description": "使用 ShipAny，您可以在几小时内完成工作原型，并在几小时内完成生产就绪的应用。我们的一键部署和预配置基础设施显著缩短了传统的数月开发周期。"
+        "title": "我可以自定义生成的内容吗？",
+        "description": "当然可以！AI Camp 提供高度的自定义选项。您可以指定学科、难度级别、知识点、教学目标和学习风格，以生成最适合您和您学生需求的内容。"
       },
       {
-        "title": "ShipAny 的基础设施包括什么？",
-        "description": "ShipAny 提供完整的基础设施栈，包括身份验证、数据库设置、API 集成、支付处理和可扩展的云部署。一切都按照行业最佳实践预先配置。"
+        "title": "AI Camp 生成的内容有多准确？",
+        "description": "AI Camp 使用先进的训练模型和经过精心筛选的教育资源，确保生成的内容准确、相关且符合教育标准。不过，我们也鼓励教育者在使用前审核内容，并提供反馈以不断提高系统质量。"
       },
       {
-        "title": "我可以自定义模板以匹配我的品牌吗？",
-        "description": "当然可以！所有 ShipAny 模板都完全可定制。您可以修改设计、功能和功能性以匹配您的品牌标识和特定业务需求，同时保持强大的底层基础设施。"
+        "title": "我如何将 AI Camp 与现有的教学方法结合？",
+        "description": "AI Camp 旨在补充而非取代传统教学。教师可以使用我们的工具来准备课程材料、定制作业、创建评估和提供个性化反馈，同时保持面对面教学的价值和个人指导的重要性。"
       }
     ]
   },
