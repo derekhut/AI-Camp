@@ -10,7 +10,7 @@ export const effectiveCommunicationTool: ToolDefinition = {
   title: '有效沟通',
   description: '根据沟通场景提供专业的沟通策略和技巧',
   icon: 'MessageSquare',
-  category: ToolCategory.CONTENT_CREATION,
+  category: ToolCategory.CREATIVITY_LAB,
   toolType: ToolType.TEXT_GENERATION,
   
   form: {

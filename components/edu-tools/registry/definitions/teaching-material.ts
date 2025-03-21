@@ -10,7 +10,7 @@ export const teachingMaterialTool: ToolDefinition = {
   title: '教学课件',
   description: '根据知识点生成结构清晰、逻辑严谨的教学课件',
   icon: 'FileText',
-  category: ToolCategory.CONTENT_CREATION,
+  category: ToolCategory.SMART_CLASSROOM,
   toolType: ToolType.TEXT_GENERATION,
   
   form: {

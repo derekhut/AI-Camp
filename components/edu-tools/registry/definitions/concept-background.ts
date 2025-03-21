@@ -12,7 +12,7 @@ export const conceptBackgroundTool: ToolDefinition = {
   title: '概念背景',
   description: '为抽象或复杂概念提供简短但全面的背景介绍',
   icon: 'Lightbulb',
-  category: ToolCategory.CONTENT_CREATION,
+  category: ToolCategory.KNOWLEDGE_ENCYCLOPEDIA,
   toolType: ToolType.TEXT_GENERATION,
   
   form: {

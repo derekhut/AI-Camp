@@ -25,7 +25,7 @@ export const lessonPlanTool: ToolDefinition = {
   id: 'lesson-plan',
   title: '课程计划生成器',
   description: '快速生成结构化的课程计划，包含教学目标、活动和评估方法',
-  category: ToolCategory.PLANNING,
+  category: ToolCategory.SMART_CLASSROOM,
   toolType: ToolType.TEXT_GENERATION,
   icon: 'clipboard-list', // 计划类图标
   

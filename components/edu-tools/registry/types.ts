@@ -19,9 +19,10 @@ export enum ToolType {
  * 工具分类枚举
  */
 export enum ToolCategory {
-  CONTENT_CREATION = "content_creation",
-  ASSESSMENT = "assessment",
-  PLANNING = "planning",
+  SMART_CLASSROOM = "smart_classroom",     // 智慧课堂
+  KNOWLEDGE_ENCYCLOPEDIA = "knowledge_encyclopedia", // 百科大全
+  CREATIVITY_LAB = "creativity_lab",       // 创意工坊
+  MINDFUL_GROWTH = "mindful_growth",       // 心灵成长
 }
 
 /**

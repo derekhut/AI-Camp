@@ -12,7 +12,7 @@ export const quizTool: ToolDefinition = {
   title: '设计选择题',
   description: '创建一个AP学科的选择题测验，基于任何主题、标准或描述！',
   icon: 'FileQuestion',
-  category: ToolCategory.ASSESSMENT,
+  category: ToolCategory.SMART_CLASSROOM,
   toolType: ToolType.QUIZ,
   
   form: {

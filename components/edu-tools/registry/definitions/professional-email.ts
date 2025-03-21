@@ -12,7 +12,7 @@ export const professionalEmailTool: ToolDefinition = {
   title: '撰写专业邮件',
   description: '根据需求生成专业、得体的商务和学术邮件',
   icon: 'Mail',
-  category: ToolCategory.CONTENT_CREATION,
+  category: ToolCategory.CREATIVITY_LAB,
   toolType: ToolType.EMAIL,
   
   form: {

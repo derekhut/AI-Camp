@@ -38,17 +38,19 @@ export default async function ToolsPage({
   
   // 定义工具类别映射（帮助显示中文名）
   const categoryNames: Record<string, string> = {
-    [ToolCategory.CONTENT_CREATION]: "内容创作",
-    [ToolCategory.ASSESSMENT]: "评测和评估",
-    [ToolCategory.PLANNING]: "规划和管理"
+    [ToolCategory.SMART_CLASSROOM]: "智慧课堂",
+    [ToolCategory.KNOWLEDGE_ENCYCLOPEDIA]: "百科大全",
+    [ToolCategory.CREATIVITY_LAB]: "创意工坊",
+    [ToolCategory.MINDFUL_GROWTH]: "心灵成长"
   };
   
   // 工具分类（从工具注册表类型定义中获取）
   const categories = [
     { id: "all", name: "全部" },
-    { id: ToolCategory.CONTENT_CREATION, name: "内容创作" },
-    { id: ToolCategory.ASSESSMENT, name: "评测和评估" },
-    { id: ToolCategory.PLANNING, name: "规划和管理" },
+    { id: ToolCategory.SMART_CLASSROOM, name: "智慧课堂" },
+    { id: ToolCategory.KNOWLEDGE_ENCYCLOPEDIA, name: "百科大全" },
+    { id: ToolCategory.CREATIVITY_LAB, name: "创意工坊" },
+    { id: ToolCategory.MINDFUL_GROWTH, name: "心灵成长" },
   ];
   
   // 将注册的工具映射到界面需要的格式

@@ -10,7 +10,7 @@ export const sentenceExpansionTool: ToolDefinition = {
   title: '句子扩写',
   description: '根据指定字数扩展原始句子，保持原意并增加修饰和细节',
   icon: 'Type',
-  category: ToolCategory.CONTENT_CREATION,
+  category: ToolCategory.KNOWLEDGE_ENCYCLOPEDIA,
   toolType: ToolType.TEXT_GENERATION,
   
   form: {

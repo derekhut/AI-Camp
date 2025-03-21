@@ -10,7 +10,7 @@ export const mindMirrorTool: ToolDefinition = {
   title: '心灵镜像',
   description: '分析用户心理状态，根据情绪提供适当的回应',
   icon: 'Heart',
-  category: ToolCategory.CONTENT_CREATION,
+  category: ToolCategory.MINDFUL_GROWTH,
   toolType: ToolType.TEXT_GENERATION,
   
   form: {

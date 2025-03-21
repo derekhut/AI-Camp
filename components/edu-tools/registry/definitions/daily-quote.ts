@@ -10,7 +10,7 @@ export const dailyQuoteTool: ToolDefinition = {
   title: '每日金句',
   description: '根据指定目的生成鼓舞人心、发人深省的金句',
   icon: 'Quote',
-  category: ToolCategory.CONTENT_CREATION,
+  category: ToolCategory.CREATIVITY_LAB,
   toolType: ToolType.DAILY_QUOTE,
   
   form: {
