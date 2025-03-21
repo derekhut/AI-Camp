@@ -71,13 +71,9 @@ export default function Footer({ footer }: { footer: FooterType }) {
               <p>
                 {footer.copyright}
                 {process.env.NEXT_PUBLIC_SHOW_POWERED_BY === "false" ? null : (
-                  <a
-                    href="https://shipany.ai"
-                    target="_blank"
-                    className="px-2 text-primary"
-                  >
-                    build with ShipAny
-                  </a>
+                  <span className="px-2 text-primary">
+                    built with ❤️
+                  </span>
                 )}
               </p>
             )}
