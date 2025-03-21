@@ -75,15 +75,7 @@ export default async function ToolsPage({
   
   // 添加一些尚未实现但计划中的工具（仅用于演示）
   const plannedTools: ToolItem[] = [
-    {
-      id: "sentence-expansion",
-      title: "句子扩写",
-      description: "将简短句子扩写为更丰富、更有表现力的段落",
-      category: ToolCategory.CONTENT_CREATION,
-      isPick: false,
-      image: "/placeholder-tool.png"
-    },
-    // 注意：concept-background 和 teaching-material 工具已经实现，已从计划中工具列表移除
+    // 所有计划中的工具都已实现
   ];
   
   // 合并已实现和计划中的工具

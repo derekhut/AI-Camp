@@ -8,6 +8,7 @@ import { quizTool } from './definitions/quiz';
 import { lessonPlanTool } from './definitions/lesson-plan';
 import { conceptBackgroundTool } from './definitions/concept-background';
 import { teachingMaterialTool } from './definitions/teaching-material';
+import { sentenceExpansionTool } from './definitions/sentence-expansion';
 
 // 注册所有工具
 // 每添加一个新工具，只需要在这里导入并注册即可
@@ -26,6 +27,9 @@ registerTool(conceptBackgroundTool);
 
 console.log('注册教学课件工具:', teachingMaterialTool.id);
 registerTool(teachingMaterialTool);
+
+console.log('注册句子扩写工具:', sentenceExpansionTool.id);
+registerTool(sentenceExpansionTool);
 
 // 导出工具注册表相关函数
 export { getAllTools, getToolById } from './tool-registry';
