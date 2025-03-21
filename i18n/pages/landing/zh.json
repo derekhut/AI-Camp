@@ -528,18 +528,18 @@
   },
   "cta": {
     "name": "cta",
-    "title": "启动您的第一个 AI SaaS 创业项目",
-    "description": "从这里开始，使用 ShipAny 启动。",
+    "title": "开启您的智能教育之旅",
+    "description": "立即加入 AI Camp，探索智能教育的新可能。",
     "buttons": [
       {
-        "title": "获取 ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
-        "icon": "GoArrowUpRight"
+        "title": "立即开始",
+        "url": "/tools",
+        "target": "_self",
+        "icon": "RiFlashlightFill"
       },
       {
-        "title": "阅读文档",
-        "url": "https://docs.shipany.ai",
+        "title": "技术文档",
+        "url": "/docs",
         "target": "_blank",
         "variant": "outline"
       }
@@ -548,33 +548,28 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板。通过丰富的模板和组件快速启动。",
+      "title": "AI Camp",
+      "description": "AI Camp 是一个为教师和学生打造的智能教育平台，提供丰富的AI教育工具和资源。",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "AI Camp"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny 保留所有权利。",
+    "copyright": "© 2025 • AI Camp 保留所有权利。",
     "nav": {
       "items": [
         {
           "title": "关于",
           "children": [
             {
-              "title": "功能特点",
-              "url": "/#feature",
+              "title": "团队",
+              "url": "/#team",
               "target": "_self"
             },
             {
-              "title": "案例展示",
-              "url": "/#showcase",
-              "target": "_self"
-            },
-            {
-              "title": "定价",
-              "url": "/#pricing",
+              "title": "技术",
+              "url": "/#technology",
               "target": "_self"
             }
           ]
@@ -583,18 +578,13 @@
           "title": "资源",
           "children": [
             {
-              "title": "文档",
-              "url": "https://docs.shipany.ai",
+              "title": "NextJS",
+              "url": "https://nextjs.org/",
               "target": "_blank"
             },
             {
-              "title": "组件",
-              "url": "https://shipany.ai/components",
-              "target": "_blank"
-            },
-            {
-              "title": "模板",
-              "url": "https://shipany.ai/templates",
+              "title": "Windsurf",
+              "url": "https://windsurf.io/",
               "target": "_blank"
             }
           ]
@@ -603,18 +593,13 @@
           "title": "友情链接",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
+              "title": "上海宋庆龄学校",
+              "url": "https://www.scls.org.cn/",
               "target": "_blank"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "Pagen",
-              "url": "https://pagen.so",
+              "title": "加州大学洛杉矶分校",
+              "url": "https://www.ucla.edu/",
               "target": "_blank"
             }
           ]
@@ -626,25 +611,25 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "url": "https://x.com/aicampedu",
           "target": "_blank"
         },
         {
           "title": "Github",
           "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "url": "https://github.com/aicampedu",
           "target": "_blank"
         },
         {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
-          "target": "_blank"
+          "title": "WeChat",
+          "icon": "RiWechatFill",
+          "url": "#",
+          "target": "_self"
         },
         {
           "title": "邮箱",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@aicamp.edu",
           "target": "_self"
         }
       ]
@@ -658,6 +643,10 @@
         {
           "title": "服务条款",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "用户协议",
+          "url": "/user-agreement"
         }
       ]
     }

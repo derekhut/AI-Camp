@@ -528,18 +528,18 @@
   },
   "cta": {
     "name": "cta",
-    "title": "Ship your first AI SaaS Startup",
-    "description": "Start from here, ship with ShipAny.",
+    "title": "Begin Your Intelligent Education Journey",
+    "description": "Join AI Camp today and explore new possibilities in smart education.",
     "buttons": [
       {
-        "title": "Get ShipAny",
-        "url": "https://shipany.ai",
-        "target": "_blank",
-        "icon": "GoArrowUpRight"
+        "title": "Get Started",
+        "url": "/tools",
+        "target": "_self",
+        "icon": "RiFlashlightFill"
       },
       {
-        "title": "Read Document",
-        "url": "https://docs.shipany.ai",
+        "title": "Technical Docs",
+        "url": "/docs",
         "target": "_blank",
         "variant": "outline"
       }
@@ -548,33 +548,28 @@
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipAny",
-      "description": "ShipAny is a NextJS boilerplate for building AI SaaS startups. Ship Fast with a variety of templates and components.",
+      "title": "AI Camp",
+      "description": "AI Camp is an intelligent education platform for teachers and students, providing rich AI educational tools and resources.",
       "logo": {
         "src": "/logo.png",
-        "alt": "ShipAny"
+        "alt": "AI Camp"
       },
       "url": "/"
     },
-    "copyright": "© 2025 • ShipAny All rights reserved.",
+    "copyright": "© 2025 • AI Camp All rights reserved.",
     "nav": {
       "items": [
         {
           "title": "About",
           "children": [
             {
-              "title": "Features",
-              "url": "/#feature",
+              "title": "Team",
+              "url": "/#team",
               "target": "_self"
             },
             {
-              "title": "Showcases",
-              "url": "/#showcase",
-              "target": "_self"
-            },
-            {
-              "title": "Pricing",
-              "url": "/#pricing",
+              "title": "Technology",
+              "url": "/#technology",
               "target": "_self"
             }
           ]
@@ -583,18 +578,13 @@
           "title": "Resources",
           "children": [
             {
-              "title": "Documents",
-              "url": "https://docs.shipany.ai",
+              "title": "NextJS",
+              "url": "https://nextjs.org/",
               "target": "_blank"
             },
             {
-              "title": "Components",
-              "url": "https://shipany.ai/components",
-              "target": "_blank"
-            },
-            {
-              "title": "Templates",
-              "url": "https://shipany.ai/templates",
+              "title": "Windsurf",
+              "url": "https://windsurf.io/",
               "target": "_blank"
             }
           ]
@@ -603,18 +593,13 @@
           "title": "Friends",
           "children": [
             {
-              "title": "ThinkAny",
-              "url": "https://thinkany.ai",
+              "title": "Shanghai Soong Ching Ling School",
+              "url": "https://www.scls.org.cn/",
               "target": "_blank"
             },
             {
-              "title": "HeyBeauty",
-              "url": "https://heybeauty.ai",
-              "target": "_blank"
-            },
-            {
-              "title": "Pagen",
-              "url": "https://pagen.so",
+              "title": "UCLA",
+              "url": "https://www.ucla.edu/",
               "target": "_blank"
             }
           ]
@@ -626,25 +611,25 @@
         {
           "title": "X",
           "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipanyai",
+          "url": "https://x.com/aicampedu",
           "target": "_blank"
         },
         {
           "title": "Github",
           "icon": "RiGithubFill",
-          "url": "https://github.com/shipanyai",
+          "url": "https://github.com/aicampedu",
           "target": "_blank"
         },
         {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/HQNnrzjZQS",
-          "target": "_blank"
+          "title": "WeChat",
+          "icon": "RiWechatFill",
+          "url": "#",
+          "target": "_self"
         },
         {
           "title": "Email",
           "icon": "RiMailLine",
-          "url": "mailto:support@shipany.ai",
+          "url": "mailto:support@aicamp.edu",
           "target": "_self"
         }
       ]
@@ -658,6 +643,10 @@
         {
           "title": "Terms of Service",
           "url": "/terms-of-service"
+        },
+        {
+          "title": "User Agreement",
+          "url": "/user-agreement"
         }
       ]
     }
