@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "几小时内构建任何 AI SaaS 创业项目 | ShipAny",
-    "description": "ShipAny 是一个用于构建 AI SaaS 创业项目的 NextJS 模板，提供各种模板和组件，帮助您快速启动。",
-    "keywords": "ShipAny, AI SaaS 模板, NextJS 模板"
+    "title": "AI Camp",
+    "description": "全面的人工智能教育工具平台，为教师和学生提供智慧课堂、百科大全、创意工坊和心灵成长四大类工具，助力教学与学习。",
+    "keywords": "AI教育工具, 智慧课堂, 百科大全, 创意工坊, 心灵成长, 教学助手"
   },
   "user": {
     "sign_in": "登录",
