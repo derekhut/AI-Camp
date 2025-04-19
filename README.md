@@ -1,6 +1,6 @@
 # AI-Powered Educational Tools Platform
 
-A comprehensive platform offering intelligent educational tools for teachers and students.
+A comprehensive platform offering intelligent educational tools for teachers and students. The platform is available both as a web application (current repository) and as a WeChat Mini Program ([open source on GitHub](https://github.com/derekhut/AICamp_MiniProgram)).
 
 ![preview](preview.png)
 
