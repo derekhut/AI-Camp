@@ -10,6 +10,7 @@ import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { deepseek } from "@ai-sdk/deepseek";
 import { openai } from "@ai-sdk/openai";
+import OpenAI from "openai";
 
 export async function POST(req: Request) {
   try {
@@ -47,6 +48,38 @@ export async function POST(req: Request) {
             }),
           });
           textModel = enhancedModel;
+        }
+        break;
+      case "openrouter-gemma":
+        // 使用 OpenAI 客户端直接访问 OpenRouter 的 Gemma
+        try {
+          const directOpenAI = new OpenAI({
+            baseURL: "https://openrouter.ai/api/v1",
+            apiKey: process.env.OPENROUTER_API_KEY || "",
+            defaultHeaders: {
+              "HTTP-Referer": process.env.SITE_URL || "https://ai-camp.vercel.app", 
+              "X-Title": "AI Camp",
+            },
+          });
+          
+          const result = await directOpenAI.chat.completions.create({
+            model: model, // 例如 "google/gemma-3n-e4b-it:free"
+            messages: [
+              {
+                role: "user",
+                content: prompt
+              }
+            ],
+          });
+          
+          // 返回结果，不使用 generateText
+          return respData({
+            text: result.choices[0].message.content || "",
+            reasoning: null,
+          });
+        } catch (error) {
+          console.error("OpenRouter-Gemma direct API error:", error);
+          return respErr(`OpenRouter-Gemma API failed: ${(error as Error).message}`);
         }
         break;
       case "siliconflow":

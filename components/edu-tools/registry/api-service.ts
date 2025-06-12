@@ -75,15 +75,21 @@ interface GenTextResponse {
 /**
  * 调用生成API获取结果
  * @param prompt 提示词
+ * @param provider 提供商，默认为"deepseek"
+ * @param model 模型名称，默认为"deepseek-chat"
  * @returns API返回的结果
  */
-export async function callGenerationAPI(prompt: string): Promise<string> {
+export async function callGenerationAPI(
+  prompt: string, 
+  provider: string = "openrouter-gemma", 
+  model: string = "google/gemma-3n-e4b-it:free"
+): Promise<string> {
   try {
     // 准备API请求体
     const requestBody: GenTextRequest = {
       prompt,
-      provider: "deepseek", // 使用DeepSeek作为提供商
-      model: "deepseek-chat", // 使用deepseek-chat模型
+      provider, // 可以是 "deepseek"、"openai"、"openrouter" 或 "openrouter-gemma"
+      model,    // 对应的模型名称
     };
 
     // 发送请求到现有的gen-text端点
